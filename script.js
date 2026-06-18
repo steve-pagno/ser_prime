@@ -1,6 +1,6 @@
 /*
-   SER PRIME INSTRUMENTAÇÃO - LANDING PAGE INTERACTION SCRIPT
-   Handles: Sticky header, hamburger menu, scroll-reveal, tab controls, countdown timer, and registration modal.
+   PRIME INSTRUMENTAÇÃO - LANDING PAGE INTERACTION SCRIPT
+   Handles: Sticky header, hamburger menu, scroll-reveal, pre-registration submission and success modal.
 */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
-      if (pageYOffset >= (sectionTop - 150)) {
+      if (window.pageYOffset >= (sectionTop - 150)) {
         current = section.getAttribute('id');
       }
     });
@@ -60,104 +60,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Countdown Timer ---
-  // Set date: October 15, 2026 08:00:00
-  const eventDate = new Date('October 15, 2026 08:00:00').getTime();
-
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const difference = eventDate - now;
-
-    // Time calculations
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-    // Output results
-    document.getElementById('days').innerText = days.toString().padStart(2, '0');
-    document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
-    document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
-    document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
-
-    // If countdown is finished
-    if (difference < 0) {
-      clearInterval(countdownInterval);
-      document.getElementById('countdown').innerHTML = "<div style='color: var(--accent-cyan); font-weight: bold; width: 100%; text-align: center; font-size: 1.25rem;'>O EVENTO COMEÇOU!</div>";
-    }
-  }
-
-  // Initial call and set interval
-  updateCountdown();
-  const countdownInterval = setInterval(updateCountdown, 1000);
-
-  // --- Tab Control: Commission/Speakers ---
-  const commissionTabButtons = document.querySelectorAll('#commissions .tab-btn');
-  const commissionTabContents = document.querySelectorAll('#commissions .tab-content');
-
-  commissionTabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      // Deactivate current active tab header & content
-      commissionTabButtons.forEach(btn => btn.classList.remove('active'));
-      commissionTabContents.forEach(content => content.classList.remove('active'));
-
-      // Activate clicked tab header
-      button.classList.add('active');
-      
-      // Activate target tab content
-      const targetId = button.getAttribute('data-tab');
-      document.getElementById(targetId).classList.add('active');
-    });
-  });
-
-  // --- Tab Control: Program Schedule ---
-  const scheduleTabButtons = document.querySelectorAll('#schedule .tab-btn');
-  const scheduleTabContents = document.querySelectorAll('#schedule .schedule-tab-content');
-
-  scheduleTabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      scheduleTabButtons.forEach(btn => btn.classList.remove('active'));
-      scheduleTabContents.forEach(content => {
-        content.style.display = 'none';
-        content.classList.remove('active');
-      });
-
-      button.classList.add('active');
-      const targetId = button.getAttribute('data-schedule');
-      const targetContent = document.getElementById(targetId);
-      targetContent.style.display = 'block';
-      targetContent.classList.add('active');
-    });
-  });
-
-  // --- Registration / Ticket Checkout Modal ---
+  // --- Pre-Registration Form Submission ---
   const modal = document.getElementById('checkout-modal');
   const modalCloseBtn = document.getElementById('modal-close-btn');
   const successCloseBtn = document.getElementById('success-close-btn');
-  const ticketBuyButtons = document.querySelectorAll('.btn-buy');
-  const selectedTicketDisplay = document.getElementById('selected-ticket-display');
-  const modalFormContainer = document.getElementById('modal-form-container');
-  const modalSuccessContainer = document.getElementById('modal-success-container');
-  const regForm = document.getElementById('registration-form');
+  const contactForm = document.getElementById('contact-form');
 
-  // Open Modal
-  ticketBuyButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const ticketName = btn.getAttribute('data-ticket');
-      selectedTicketDisplay.innerText = `Ingresso Selecionado: ${ticketName}`;
+  // Handle Form Submission
+  window.submitPreRegistration = function() {
+    const submitBtn = document.getElementById('submit-btn');
+    const originalText = submitBtn.innerHTML;
+    
+    // Disable button & show loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Processando...';
+    
+    // Simulate API call
+    setTimeout(() => {
+      // Show success modal
       modal.classList.add('active');
-    });
-  });
+      
+      // Reset form and submit button
+      contactForm.reset();
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+    }, 1200);
+  };
 
   // Close Modal Function
   function closeModal() {
     modal.classList.remove('active');
-    // Wait for transition before resetting form view
-    setTimeout(() => {
-      modalFormContainer.style.display = 'block';
-      modalSuccessContainer.style.display = 'none';
-      regForm.reset();
-    }, 300);
   }
 
   modalCloseBtn.addEventListener('click', closeModal);
@@ -169,24 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
       closeModal();
     }
   });
-
-  // Handle Form Submission
-  window.submitRegistrationForm = function() {
-    const submitBtn = regForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    
-    // Disable button & show loading state
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Processando...';
-    
-    // Simulate API call
-    setTimeout(() => {
-      modalFormContainer.style.display = 'none';
-      modalSuccessContainer.style.display = 'block';
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalText;
-    }, 1500);
-  };
 
   // --- Scroll Reveal Animation ---
   const revealElements = document.querySelectorAll('.reveal');

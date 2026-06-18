@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ser Prime Instrumentação - Encontro de Imersão em Instrumentação Cirúrgica. Confira a programação, comissões, palestrantes e faça sua inscrição.">
-  <title>SER PRIME INSTRUMENTAÇÃO - Imersão em Instrumentação Cirúrgica</title>
+  <meta name="description" content="Prime Instrumentação - Programa de capacitação em instrumentação cirúrgica com foco em Neurocirurgia de Crânio, Coluna e Minimamente Invasiva.">
+  <title>PRIME INSTRUMENTAÇÃO - Capacitação em Instrumentação Cirúrgica</title>
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -18,23 +18,19 @@
   <header id="header">
     <div class="container navbar-container">
       <a href="#home" class="logo">
-        <div class="logo-icon">SP</div>
-        <span>SER <span class="text-gradient">PRIME</span></span>
+        <img src="assets/logo sem.png" alt="Prime Instrumentação Logo" class="logo-img">
       </a>
       
       <nav class="nav-menu" id="nav-menu">
         <a href="#home" class="nav-link active">Home</a>
-        <a href="#about" class="nav-link">O Evento</a>
-        <a href="#commissions" class="nav-link">Comissões</a>
-        <a href="#schedule" class="nav-link">Programação</a>
-        <a href="#courses" class="nav-link">Cursos</a>
-        <a href="#venue" class="nav-link">Local</a>
-        <a href="#tickets" class="nav-link">Inscrições</a>
-        <a href="#papers" class="nav-link">Trabalhos</a>
+        <a href="#about" class="nav-link">O Curso</a>
+        <a href="#curriculum" class="nav-link">O que aprender</a>
+        <a href="#coordination" class="nav-link">Coordenação</a>
+        <a href="#team" class="nav-link">Equipe</a>
       </nav>
       
       <div style="display: flex; align-items: center; gap: 15px;">
-        <a href="#tickets" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.85rem;">Inscreva-se</a>
+        <a href="#inscription" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.85rem;">Inscreva-se</a>
         <button class="hamburger" id="hamburger" aria-label="Abrir Menu">
           <span></span>
           <span></span>
@@ -48,70 +44,19 @@
   <section id="home" class="hero">
     <div class="container hero-grid">
       <div class="hero-content reveal">
-        <h1 class="text-gradient">SER PRIME<br>INSTRUMENTAÇÃO</h1>
-        <p>Encontro de Imersão em Instrumentação Cirúrgica. Participe de debates, painéis e workshops práticos liderados por renomados especialistas da área médica, cirúrgica e de instrumentação do país.</p>
-        
-        <div class="hero-meta">
-          <div class="meta-item">
-            <i class="fa-regular fa-calendar-days"></i>
-            <span>15 a 17 de Outubro, 2026</span>
-          </div>
-          <div class="meta-item">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Feira de Santana - BA</span>
-          </div>
-        </div>
+        <h1 class="text-gradient">PRIME<br>INSTRUMENTAÇÃO</h1>
+        <p>Um dos mais completos programas de capacitação em instrumentação cirúrgica, desenvolvido para formar profissionais preparados para atuar com segurança, conhecimento técnico e excelência.</p>
         
         <div class="hero-actions">
-          <a href="#tickets" class="btn btn-primary">Garantir Vaga <i class="fa-solid fa-arrow-right"></i></a>
-          <a href="#schedule" class="btn btn-secondary">Ver Programação</a>
-        </div>
-
-        <div class="countdown-container glass-panel">
-          <div class="countdown-title">O evento começa em</div>
-          <div class="countdown-timer" id="countdown">
-            <div class="time-block">
-              <span class="time-number" id="days">00</span>
-              <span class="time-label">Dias</span>
-            </div>
-            <div class="time-block">
-              <span class="time-number" id="hours">00</span>
-              <span class="time-label">Horas</span>
-            </div>
-            <div class="time-block">
-              <span class="time-number" id="minutes">00</span>
-              <span class="time-label">Min</span>
-            </div>
-            <div class="time-block">
-              <span class="time-number" id="seconds">00</span>
-              <span class="time-label">Seg</span>
-            </div>
-          </div>
+          <a href="#inscription" class="btn btn-primary">Garantir Vaga <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#about" class="btn btn-secondary">Conhecer o Curso</a>
         </div>
       </div>
       
       <div class="hero-visual reveal">
         <div class="glowing-globe"></div>
-        <div class="hero-card glass-panel">
-          <h3 class="hero-card-title">Destaques do Encontro</h3>
-          <div class="hero-card-list">
-            <div class="hero-card-item">
-              <i class="fa-solid fa-circle-check"></i>
-              <span>Imersão teórica e prática intensiva</span>
-            </div>
-            <div class="hero-card-item">
-              <i class="fa-solid fa-circle-check"></i>
-              <span>Workshops práticos de suturas e montagem de mesa</span>
-            </div>
-            <div class="hero-card-item">
-              <i class="fa-solid fa-circle-check"></i>
-              <span>Network com grandes fornecedores de materiais cirúrgicos</span>
-            </div>
-            <div class="hero-card-item">
-              <i class="fa-solid fa-circle-check"></i>
-              <span>Certificação nacional inclusa</span>
-            </div>
-          </div>
+        <div class="hero-logo-container glass-panel">
+          <img src="assets/logo sem.png" alt="Prime Instrumentação" class="hero-logo">
         </div>
       </div>
     </div>
@@ -121,571 +66,227 @@
   <section id="about" class="about">
     <div class="container">
       <div class="section-title reveal">
-        <h2>O Evento</h2>
-        <p>Uma imersão completa desenhada para atualizar seus conhecimentos e dominar as técnicas cirúrgicas modernas.</p>
+        <h2>O Curso</h2>
+        <p>Uma formação ampla, progressiva e alinhada às exigências da prática cirúrgica moderna.</p>
       </div>
       
       <div class="about-grid">
         <div class="about-content reveal">
-          <h3>Inovação e Excelência na Prática Cirúrgica</h3>
-          <p>O Ser Prime Instrumentação surge como um polo difusor de conhecimento prático de alta performance. O objetivo principal é capacitar profissionais de instrumentação cirúrgica, enfermeiros e estudantes para atuar com maestria em cirurgias de alta e média complexidade.</p>
-          <p>Com foco nas tecnologias mais recentes, o evento conecta instrumentadores renomados e cirurgiões ativos em um ambiente ideal para troca de experiências, workshops práticos e atualização acadêmica de altíssimo nível.</p>
+          <h3>Formação Sólida e Atualizada</h3>
+          <p>A Prime Instrumentação é um dos mais completos programas de capacitação em instrumentação cirúrgica, desenvolvido para formar profissionais preparados para atuar com segurança, conhecimento técnico e excelência em diferentes especialidades cirúrgicas.</p>
+          <p>O curso aborda desde os fundamentos da instrumentação cirúrgica básica até conteúdos avançados, proporcionando uma formação ampla e progressiva para estudantes e profissionais da área da saúde.</p>
         </div>
         
-        <div class="about-stats reveal">
-          <div class="stat-card glass-panel">
-            <span class="stat-number text-gradient">20+</span>
-            <span class="stat-label">Palestrantes</span>
-          </div>
-          <div class="stat-card glass-panel">
-            <span class="stat-number text-gradient">30h+</span>
-            <span class="stat-label">Horas de Atividades</span>
-          </div>
-          <div class="stat-card glass-panel">
-            <span class="stat-number text-gradient">15+</span>
-            <span class="stat-label">Workshops Práticos</span>
-          </div>
-          <div class="stat-card glass-panel">
-            <span class="stat-number text-gradient">500+</span>
-            <span class="stat-label">Participantes</span>
-          </div>
+        <div class="about-highlight glass-panel reveal">
+          <div class="highlight-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>Diferencial em Neurocirurgia</h3>
+          <p>Como diferencial, a formação conta com módulos exclusivos de Neurocirurgia, incluindo um bônus especial em Instrumentação em Neurocirurgia Minimamente Invasiva, onde os alunos terão acesso ao conhecimento dos principais equipamentos, instrumentais e tecnologias utilizados nos procedimentos neurocirúrgicos modernos.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- --- Welcome Message --- -->
-  <section id="message" class="message">
-    <div class="container">
-      <div class="message-card glass-panel reveal">
-        <div class="message-text">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div class="message-author">
-          <div class="author-avatar">
-            <div>BP</div>
-          </div>
-          <div class="author-info">
-            <h4>Prof. Bruno Bacellar Pedreira</h4>
-            <p>Presidente do Comitê Científico & Coordenador Geral</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- Commissions / Speakers Section --- -->
-  <section id="commissions" class="commissions">
+  <!-- --- Curriculum Section --- -->
+  <section id="curriculum" class="courses">
     <div class="container">
       <div class="section-title reveal">
-        <h2>Comissão & Palestrantes</h2>
-        <p>A equipe de especialistas responsável pela estruturação técnica e científica do encontro.</p>
-      </div>
-      
-      <div class="tabs-header reveal">
-        <button class="tab-btn active" data-tab="speakers-all">Todos</button>
-        <button class="tab-btn" data-tab="comissao-org">Comissão Organizadora</button>
-        <button class="tab-btn" data-tab="comissao-cient">Comissão Científica</button>
-      </div>
-      
-      <!-- Tab Content: All / Organization -->
-      <div class="tab-content active" id="speakers-all">
-        <!-- Speaker 1 -->
-        <div class="speaker-card glass-panel reveal">
-          <div class="speaker-avatar">
-            <i class="fa-solid fa-user-doctor"></i>
-          </div>
-          <h4>Dr. Marcio Brandão</h4>
-          <p>Cirurgião Geral & Especialista em Robótica</p>
-          <span class="tag">Organização</span>
-        </div>
-        
-        <!-- Speaker 2 -->
-        <div class="speaker-card glass-panel reveal">
-          <div class="speaker-avatar">
-            <i class="fa-solid fa-user-doctor"></i>
-          </div>
-          <h4>Enfª. Renata Nunes</h4>
-          <p>Instrumentadora Chefe do Bloco Operatório</p>
-          <span class="tag">Científica</span>
-        </div>
-        
-        <!-- Speaker 3 -->
-        <div class="speaker-card glass-panel reveal">
-          <div class="speaker-avatar">
-            <i class="fa-solid fa-user-doctor"></i>
-          </div>
-          <h4>Dr. Eduardo Varjão</h4>
-          <p>Neurocirurgião & Coordenador Acadêmico</p>
-          <span class="tag">Organização</span>
-        </div>
-        
-        <!-- Speaker 4 -->
-        <div class="speaker-card glass-panel reveal">
-          <div class="speaker-avatar">
-            <i class="fa-solid fa-user-doctor"></i>
-          </div>
-          <h4>Enfª. Anna Paula Matos</h4>
-          <p>Docente em Enfermagem Cirúrgica</p>
-          <span class="tag">Científica</span>
-        </div>
-        
-        <!-- Speaker 5 -->
-        <div class="speaker-card glass-panel reveal">
-          <div class="speaker-avatar">
-            <i class="fa-solid fa-user-doctor"></i>
-          </div>
-          <h4>Dr. Yann Gusmão</h4>
-          <p>Ortopedista e Traumatologista</p>
-          <span class="tag">Organização</span>
-        </div>
-        
-        <!-- Speaker 6 -->
-        <div class="speaker-card glass-panel reveal">
-          <div class="speaker-avatar">
-            <i class="fa-solid fa-user-doctor"></i>
-          </div>
-          <h4>FT. Vinicius Silva</h4>
-          <p>Fisioterapeuta Intensivista Cirúrgico</p>
-          <span class="tag">Científica</span>
-        </div>
-      </div>
-      
-      <!-- Tab Content: Org Only -->
-      <div class="tab-content" id="comissao-org">
-        <div class="speaker-card glass-panel">
-          <div class="speaker-avatar">
-            <i class="fa-solid fa-user-doctor"></i>
-          </div>
-          <h4>Dr. Marcio Brandão</h4>
-          <p>Cirurgião Geral & Especialista em Robótica</p>
-          <span class="tag">Organização</span>
-        </div>
-        <div class="speaker-card glass-panel">
-          <div class="speaker-avatar">
-            <i class="fa-solid fa-user-doctor"></i>
-          </div>
-          <h4>Dr. Eduardo Varjão</h4>
-          <p>Neurocirurgião & Coordenador Acadêmico</p>
-          <span class="tag">Organização</span>
-        </div>
-        <div class="speaker-card glass-panel">
-          <div class="speaker-avatar">
-            <i class="fa-solid fa-user-doctor"></i>
-          </div>
-          <h4>Dr. Yann Gusmão</h4>
-          <p>Ortopedista e Traumatologista</p>
-          <span class="tag">Organização</span>
-        </div>
-      </div>
-      
-      <!-- Tab Content: Scientific Only -->
-      <div class="tab-content" id="comissao-cient">
-        <div class="speaker-card glass-panel">
-          <div class="speaker-avatar">
-            <i class="fa-solid fa-user-doctor"></i>
-          </div>
-          <h4>Enfª. Renata Nunes</h4>
-          <p>Instrumentadora Chefe do Bloco Operatório</p>
-          <span class="tag">Científica</span>
-        </div>
-        <div class="speaker-card glass-panel">
-          <div class="speaker-avatar">
-            <i class="fa-solid fa-user-doctor"></i>
-          </div>
-          <h4>Enfª. Anna Paula Matos</h4>
-          <p>Docente em Enfermagem Cirúrgica</p>
-          <span class="tag">Científica</span>
-        </div>
-        <div class="speaker-card glass-panel">
-          <div class="speaker-avatar">
-            <i class="fa-solid fa-user-doctor"></i>
-          </div>
-          <h4>FT. Vinicius Silva</h4>
-          <p>Fisioterapeuta Intensivista Cirúrgico</p>
-          <span class="tag">Científica</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- Program Schedule Section --- -->
-  <section id="schedule" class="schedule">
-    <div class="container">
-      <div class="section-title reveal">
-        <h2>Programação Oficial</h2>
-        <p>Acompanhe a grade de horários, palestras e mesas-redondas preparadas para o evento.</p>
-      </div>
-      
-      <div class="tabs-header reveal" style="margin-bottom: 50px;">
-        <button class="tab-btn active" data-schedule="day-0">15 Out (Pré-Congresso)</button>
-        <button class="tab-btn" data-schedule="day-1">16 Out (Dia 1)</button>
-        <button class="tab-btn" data-schedule="day-2">17 Out (Dia 2)</button>
-      </div>
-      
-      <!-- Schedule: Day 0 -->
-      <div class="schedule-tab-content active" id="day-0">
-        <div class="timeline">
-          <div class="timeline-item reveal">
-            <div class="timeline-header">
-              <span class="timeline-time"><i class="fa-regular fa-clock"></i> 08:00 - 12:00</span>
-              <span class="timeline-tag">Minicurso</span>
-            </div>
-            <div class="timeline-content">
-              <h4 class="timeline-title">Credenciamento & Retirada de Crachás</h4>
-              <p class="timeline-speaker">Secretaria Executiva no Hall Principal</p>
-            </div>
-          </div>
-          
-          <div class="timeline-item reveal">
-            <div class="timeline-header">
-              <span class="timeline-time"><i class="fa-regular fa-clock"></i> 14:00 - 18:00</span>
-              <span class="timeline-tag">Workshop</span>
-            </div>
-            <div class="timeline-content">
-              <h4 class="timeline-title">Workshop Prático: Paramentação Cirúrgica e Montagem de Mesa Estéril</h4>
-              <p class="timeline-speaker">Instrutores: Enfª. Renata Nunes & Equipe Prime</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Schedule: Day 1 -->
-      <div class="schedule-tab-content" id="day-1" style="display: none;">
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-header">
-              <span class="timeline-time"><i class="fa-regular fa-clock"></i> 08:30 - 09:30</span>
-              <span class="timeline-tag">Palestra Magna</span>
-            </div>
-            <div class="timeline-content">
-              <h4 class="timeline-title">Abertura Oficial: O Futuro da Instrumentação na Era da Cirurgia Robótica</h4>
-              <p class="timeline-speaker">Palestrante: Dr. Marcio Brandão</p>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-header">
-              <span class="timeline-time"><i class="fa-regular fa-clock"></i> 10:00 - 12:00</span>
-              <span class="timeline-tag">Mesa Redonda</span>
-            </div>
-            <div class="timeline-content">
-              <h4 class="timeline-title">Mesa Redonda: Biossegurança, Rastreabilidade e Gestão de OPMEs no Bloco Cirúrgico</h4>
-              <p class="timeline-speaker">Participantes: Enfª. Anna Paula Matos, Dr. Eduardo Varjão, Enfª. Renata Nunes</p>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-header">
-              <span class="timeline-time"><i class="fa-regular fa-clock"></i> 14:00 - 16:00</span>
-              <span class="timeline-tag">Painel Técnico</span>
-            </div>
-            <div class="timeline-content">
-              <h4 class="timeline-title">Instrumentação Cirúrgica Avançada em Ortopedia de Alta Complexidade</h4>
-              <p class="timeline-speaker">Palestrante: Dr. Yann Gusmão</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Schedule: Day 2 -->
-      <div class="schedule-tab-content" id="day-2" style="display: none;">
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-header">
-              <span class="timeline-time"><i class="fa-regular fa-clock"></i> 09:00 - 10:30</span>
-              <span class="timeline-tag">Palestra</span>
-            </div>
-            <div class="timeline-content">
-              <h4 class="timeline-title">Práticas de Instrumentação em Neurocirurgia e Microcirurgias Complexas</h4>
-              <p class="timeline-speaker">Palestrante: Dr. Eduardo Varjão</p>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-header">
-              <span class="timeline-time"><i class="fa-regular fa-clock"></i> 11:00 - 12:30</span>
-              <span class="timeline-tag">Workshop Final</span>
-            </div>
-            <div class="timeline-content">
-              <h4 class="timeline-title">Treinamento Hands-On: Ergonomia e Dinâmica da Equipe Cirúrgica de Alta Performance</h4>
-              <p class="timeline-speaker">Instrutores: FT. Vinicius Silva & Equipe Científica</p>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-header">
-              <span class="timeline-time"><i class="fa-regular fa-clock"></i> 16:00 - 17:00</span>
-              <span class="timeline-tag">Encerramento</span>
-            </div>
-            <div class="timeline-content">
-              <h4 class="timeline-title">Premiação de Trabalhos Científicos & Cerimônia de Encerramento</h4>
-              <p class="timeline-speaker">Coordenação Geral do Evento</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- Courses Section --- -->
-  <section id="courses" class="courses">
-    <div class="container">
-      <div class="section-title reveal">
-        <h2>Cursos Pré-Congresso</h2>
-        <p>Atividades práticas opcionais com foco em desenvolvimento técnico direcionado.</p>
+        <h2>O Que Você Vai Aprender</h2>
+        <p>Domine desde os fundamentos básicos até as tecnologias mais avançadas da instrumentação.</p>
       </div>
       
       <div class="courses-grid">
-        <!-- Course 1 -->
+        <!-- Item 1 -->
+        <div class="course-card glass-panel reveal">
+          <div class="course-icon"><i class="fa-solid fa-book-medical"></i></div>
+          <h3>Fundamentos</h3>
+          <p>Fundamentos da instrumentação cirúrgica básica e as bases da atuação profissional.</p>
+        </div>
+        
+        <!-- Item 2 -->
+        <div class="course-card glass-panel reveal">
+          <div class="course-icon"><i class="fa-solid fa-table-list"></i></div>
+          <h3>Montagem de Mesas</h3>
+          <p>Técnicas de montagem, organização e otimização das mesas cirúrgicas por procedimentos.</p>
+        </div>
+        
+        <!-- Item 3 -->
         <div class="course-card glass-panel reveal">
           <div class="course-icon"><i class="fa-solid fa-scissors"></i></div>
-          <h3>Instrumentação em Cirurgia Robótica</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <div class="course-meta">
-            <span><i class="fa-regular fa-clock"></i> 4 Horas</span>
-            <span>Vagas: 30 participantes</span>
-          </div>
+          <h3>Instrumentais</h3>
+          <p>Reconhecimento técnico aprofundado, classificação e manuseio de instrumentais e materiais.</p>
         </div>
         
-        <!-- Course 2 -->
+        <!-- Item 4 -->
         <div class="course-card glass-panel reveal">
-          <div class="course-icon"><i class="fa-solid fa-hand-holding-medical"></i></div>
-          <h3>Técnicas Avançadas de Suturas & Hemostase</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <div class="course-meta">
-            <span><i class="fa-regular fa-clock"></i> 4 Horas</span>
-            <span>Vagas: 40 participantes</span>
-          </div>
+          <div class="course-icon"><i class="fa-solid fa-door-open"></i></div>
+          <h3>Rotinas do Centro</h3>
+          <p>Protocolos práticos, comportamento e rotinas essenciais dentro do bloco cirúrgico.</p>
         </div>
         
-        <!-- Course 3 -->
+        <!-- Item 5 -->
         <div class="course-card glass-panel reveal">
           <div class="course-icon"><i class="fa-solid fa-shield-virus"></i></div>
-          <h3>Sterilization & Rastreabilidade Hospitalar</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <div class="course-meta">
-            <span><i class="fa-regular fa-clock"></i> 3 Horas</span>
-            <span>Vagas: 50 participantes</span>
-          </div>
+          <h3>Biossegurança</h3>
+          <p>Normas de biossegurança, assepsia, esterilização e garantia de boas práticas cirúrgicas.</p>
         </div>
+        
+        <!-- Item 6 -->
+        <div class="course-card glass-panel reveal">
+          <div class="course-icon"><i class="fa-solid fa-stethoscope"></i></div>
+          <h3>Especialidades</h3>
+          <p>Atuação qualificada do instrumentador nas mais diversas especialidades cirúrgicas.</p>
+        </div>
+        
+        <!-- Item 7 -->
+        <div class="course-card glass-panel reveal">
+          <div class="course-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>Neurocirurgia</h3>
+          <p>Introdução à instrumentação e dinâmica de procedimentos no campo da Neurocirurgia.</p>
+        </div>
+        
+        <!-- Item 8 -->
+        <div class="course-card glass-panel reveal">
+          <div class="course-icon"><i class="fa-solid fa-bone"></i></div>
+          <h3>Crânio e Coluna</h3>
+          <p>Capacitação técnica específica em procedimentos de Neurocirurgia de Crânio e de Coluna.</p>
+        </div>
+        
+        <!-- Item 9 -->
+        <div class="course-card glass-panel reveal">
+          <div class="course-icon"><i class="fa-solid fa-eye"></i></div>
+          <h3>Neuro Minimamente Invasiva</h3>
+          <p>Módulo bônus focado nas exigências técnicas da Neurocirurgia Minimamente Invasiva.</p>
+        </div>
+        
+        <!-- Item 10 -->
+        <div class="course-card glass-panel reveal">
+          <div class="course-icon"><i class="fa-solid fa-microscope"></i></div>
+          <h3>Equipamentos Modernos</h3>
+          <p>Manuseio, identificação e reconhecimento dos principais equipamentos usados em neurocirurgia.</p>
+        </div>
+      </div>
+      
+      <div class="curriculum-conclusion glass-panel reveal">
+        <p>A Prime Instrumentação foi criada para oferecer uma formação sólida, atualizada e alinhada às exigências da prática cirúrgica moderna, preparando profissionais para atuar com confiança nos mais diversos cenários do centro cirúrgico.</p>
       </div>
     </div>
   </section>
 
-  <!-- --- Venue Section --- -->
-  <section id="venue" class="venue">
+  <!-- --- Coordination & Academic Endorsement Section --- -->
+  <section id="coordination" class="message">
     <div class="container">
       <div class="section-title reveal">
-        <h2>Local & Hospedagem</h2>
-        <p>O evento ocorrerá em uma excelente estrutura de convenções em Feira de Santana - BA.</p>
+        <h2>Liderança & Supervisão Científica</h2>
+        <p>O curso conta com corpo docente médico especializado garantindo rigor técnico e excelência acadêmica.</p>
       </div>
       
-      <div class="venue-grid">
-        <div class="venue-details reveal">
-          <h3>Prime Convention Hall</h3>
-          <p>Localizado estrategicamente no coração de Feira de Santana, o Prime Convention Hall oferece tecnologia de ponta em auditórios, salas de workshop climatizadas, área de exposição espaçosa e excelente acessibilidade.</p>
-          
-          <div class="hotel-list">
-            <div class="hotel-card glass-panel">
-              <div class="hotel-icon"><i class="fa-solid fa-hotel"></i></div>
-              <div class="hotel-info">
-                <h4>Hotel Prime Executive (Parceiro Oficial)</h4>
-                <p>Desconto de 15% para inscritos no evento. Reservas via WhatsApp.</p>
-              </div>
+      <div class="coordination-grid single-card">
+        <!-- Dr. Márcio Brandão -->
+        <div class="coordinator-card glass-panel reveal">
+          <div class="coordinator-header">
+            <div class="coordinator-avatar">
+              <img src="assets/marcio.jpeg" alt="Dr. Márcio Brandão">
             </div>
-            
-            <div class="hotel-card glass-panel">
-              <div class="hotel-icon"><i class="fa-solid fa-hotel"></i></div>
-              <div class="hotel-info">
-                <h4>Grand Hotel Feira de Santana</h4>
-                <p>Localizado a 5 minutos do centro de convenções.</p>
-              </div>
+            <div class="coordinator-title">
+              <span class="tag">Chancela Acadêmica</span>
+              <h3>Dr. Márcio Brandão</h3>
+              <p>Médico Neurocirurgião</p>
             </div>
           </div>
-        </div>
-        
-        <div class="venue-map-container reveal">
-          <div class="venue-map-mock">
-            <i class="fa-solid fa-map-location-dot"></i>
-            <h3>Mapa do Evento</h3>
-            <p>Avenida Getúlio Vargas, 2026, Feira de Santana - BA, Brasil</p>
-            <a href="https://maps.google.com" target="_blank" class="btn btn-secondary" style="margin-top: 15px; padding: 6px 15px; font-size: 0.8rem;">Ver no Google Maps</a>
+          <div class="coordinator-body">
+            <p class="crm-rqe">CRM-BA 6.827 | RQE 1.134 e 1.136</p>
+            <p>Reconhecido por sua ampla atuação na área neurológica, neuropediatria e por liderar serviços de Neurocirurgia em diversos hospitais da Bahia.</p>
+            <p class="emphasis-text">A participação do Dr. Márcio Brandão reforça o compromisso da Prime Instrumentação com a qualidade, a credibilidade e a excelência na formação de seus alunos.</p>
+            <div class="coordinator-social-link">
+              <a href="https://instagram.com" target="_blank" class="social-link-btn"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- --- Tickets / Registration --- -->
-  <section id="tickets" class="tickets">
+  <!-- --- Team Section --- -->
+  <section id="team" class="commissions">
     <div class="container">
       <div class="section-title reveal">
-        <h2>Garanta sua Inscrição</h2>
-        <p>Escolha a categoria correspondente e garanta sua presença no maior evento de instrumentação da região.</p>
+        <h2>Equipe do Curso</h2>
+        <p>Corpo de instrutores e coordenadores focados em impulsionar sua carreira.</p>
       </div>
       
-      <div class="tickets-grid">
-        <!-- Ticket 1 -->
-        <div class="ticket-card glass-panel reveal">
-          <h3 class="ticket-name">Estudantes</h3>
-          <div class="ticket-price">
-            <span class="currency">R$</span>
-            <span class="amount">120</span>
+      <div class="team-grid reveal">
+        <!-- Letícia Oliveira -->
+        <div class="team-card glass-panel">
+          <div class="team-photo-container">
+            <img src="assets/leticia.jpeg" alt="Letícia Oliveira">
           </div>
-          <div class="ticket-features">
-            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Acesso aos 2 dias de congresso</div>
-            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Certificado de 20h complementares</div>
-            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Acesso à feira de expositores</div>
-            <div class="feature-item disabled"><i class="fa-solid fa-circle-xmark"></i> Workshops pré-congresso inclusos</div>
+          <h4>Letícia Oliveira</h4>
+          <p class="role">Instrumentadora Cirúrgica</p>
+          <span class="tag">Segunda Instrumentadora</span>
+          <div class="team-social-links">
+            <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           </div>
-          <button class="btn btn-secondary btn-buy" data-ticket="Estudante - R$ 120,00">Comprar Ingresso</button>
         </div>
         
-        <!-- Ticket 2 (Featured) -->
-        <div class="ticket-card glass-panel featured reveal">
-          <div class="ticket-badge">Mais Popular</div>
-          <h3 class="ticket-name">Profissionais & Instrumentadores</h3>
-          <div class="ticket-price">
-            <span class="currency">R$</span>
-            <span class="amount">250</span>
+        <!-- Francisco Fernandes -->
+        <div class="team-card glass-panel">
+          <div class="team-photo-container">
+            <img src="assets/francisco.jpeg" alt="Francisco Fernandes">
           </div>
-          <div class="ticket-features">
-            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Acesso aos 2 dias de congresso</div>
-            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Certificado digital de 20h</div>
-            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Acesso à feira de expositores</div>
-            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Workshops pré-congresso (20% off)</div>
+          <h4>Francisco Fernandes</h4>
+          <p class="role">Instrumentador Cirúrgico</p>
+          <span class="tag">Coordenador da Equipe</span>
+          <div class="team-social-links">
+            <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           </div>
-          <button class="btn btn-primary btn-buy" data-ticket="Profissional - R$ 250,00">Comprar Ingresso</button>
         </div>
         
-        <!-- Ticket 3 -->
-        <div class="ticket-card glass-panel reveal">
-          <h3 class="ticket-name">Médicos & VIP</h3>
-          <div class="ticket-price">
-            <span class="currency">R$</span>
-            <span class="amount">450</span>
+        <!-- Camila Moura -->
+        <div class="team-card glass-panel">
+          <div class="team-photo-container">
+            <img src="assets/camila.jpeg" alt="Camila Moura">
           </div>
-          <div class="ticket-features">
-            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Acesso aos 2 dias de congresso</div>
-            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Certificado especial de 30h</div>
-            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Acesso completo à área VIP</div>
-            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> 1 Curso Pré-congresso incluso</div>
+          <h4>Camila Moura</h4>
+          <p class="role">Médica Neurocirurgiã</p>
+          <span class="tag">Coordenação Científica</span>
+          <div class="team-social-links">
+            <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           </div>
-          <button class="btn btn-secondary btn-buy" data-ticket="Médico/VIP - R$ 450,00">Comprar Ingresso</button>
+        </div>
+        
+        <!-- Márcio Brandão -->
+        <div class="team-card glass-panel">
+          <div class="team-photo-container">
+            <img src="assets/marcio.jpeg" alt="Márcio Brandão">
+          </div>
+          <h4>Márcio Brandão</h4>
+          <p class="role">Médico Neurocirurgião</p>
+          <span class="tag">Chancela Acadêmica</span>
+          <div class="team-social-links">
+            <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- --- Scientific Papers Section --- -->
-  <section id="papers" class="papers">
+  <!-- --- Inscription Form Section --- -->
+  <section id="inscription" class="venue">
     <div class="container">
-      <div class="papers-box glass-panel reveal">
-        <div class="papers-icon"><i class="fa-solid fa-file-pdf"></i></div>
-        <h3>Submissão de Trabalhos Científicos</h3>
-        <p>Apresente sua pesquisa acadêmica no Ser Prime Instrumentação. Aceitamos relatos de caso, estudos de coorte e revisões sistemáticas focadas em técnicas cirúrgicas ou melhorias hospitalares.</p>
-        
-        <div class="papers-meta">
-          <div class="papers-meta-item">
-            <h4>Envio Limite</h4>
-            <p>15 de Setembro, 2026</p>
-          </div>
-          <div class="papers-meta-item">
-            <h4>Resultado</h4>
-            <p>30 de Setembro, 2026</p>
-          </div>
-        </div>
-        
-        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-          <a href="#" class="btn btn-primary"><i class="fa-solid fa-cloud-arrow-up"></i> Enviar Resumo</a>
-          <a href="#" class="btn btn-secondary"><i class="fa-solid fa-circle-info"></i> Diretrizes de Submissão</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- Sponsors Section --- -->
-  <section class="sponsors">
-    <div class="container">
-      <div class="sponsors-grid reveal">
-        <span style="font-weight: 600; color: var(--text-muted); margin-right: 20px;">REALIZAÇÃO & APOIO:</span>
-        <div class="sponsor-logo" style="font-weight: 800; font-size: 1.25rem; color: #fff;">SER CIRÚRGICO</div>
-        <div class="sponsor-logo" style="font-weight: 800; font-size: 1.25rem; color: #fff;">BAHIA MED</div>
-        <div class="sponsor-logo" style="font-weight: 800; font-size: 1.25rem; color: #fff;">PRIME MEDICAL</div>
-        <div class="sponsor-logo" style="font-weight: 800; font-size: 1.25rem; color: #fff;">MEDTECH LAB</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- Footer --- -->
-  <footer>
-    <div class="container footer-grid">
-      <div class="footer-info">
-        <a href="#home" class="logo" style="margin-bottom: 15px;">
-          <div class="logo-icon">SP</div>
-          <span>SER <span class="text-gradient">PRIME</span></span>
-        </a>
-        <p>Encontro de Imersão e Capacitação Acadêmica e Prática em Instrumentação Cirúrgica do Interior da Bahia.</p>
-        <div class="social-links">
-          <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="social-btn" aria-label="Twitter X"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://www.instagram.com/neurointerfsa/" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        </div>
+      <div class="section-title reveal">
+        <h2>Garanta Sua Vaga</h2>
+        <p>Inicie seu processo de pré-inscrição e receba os detalhes completos da nossa assessoria.</p>
       </div>
       
-      <div class="footer-links">
-        <h3>Links Rápidos</h3>
-        <div class="footer-links-list">
-          <a href="#home">Home</a>
-          <a href="#about">O Evento</a>
-          <a href="#schedule">Programação</a>
-          <a href="#venue">Local & Acomodação</a>
-          <a href="#tickets">Inscrições</a>
-        </div>
-      </div>
-      
-      <div class="footer-contact">
-        <h3>Contato & Informações</h3>
-        <div class="footer-contact-list">
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-envelope"></i>
-            <span>contato@serprimeinstrumentacao.com.br</span>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Feira de Santana - BA, Brasil</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="container footer-bottom">
-      <p>&copy; 2026 Ser Prime Instrumentação. Todos os direitos reservados. Feito com excelência para capacitação cirúrgica.</p>
-    </div>
-  </footer>
-
-  <!-- --- Registration Checkout Modal --- -->
-  <div class="modal-overlay" id="checkout-modal">
-    <div class="modal-content glass-panel">
-      <button class="modal-close" id="modal-close-btn">&times;</button>
-      
-      <!-- Modal Form -->
-      <div id="modal-form-container">
-        <div class="modal-header">
-          <h3>Inscrição do Evento</h3>
-          <p>Preencha os dados abaixo para reservar sua credencial.</p>
-          <div style="margin-top: 10px; font-weight: 600; color: var(--accent-cyan);" id="selected-ticket-display">Ingresso Selecionado: </div>
-        </div>
-        
-        <form id="registration-form" onsubmit="event.preventDefault(); submitRegistrationForm();">
+      <div class="inscription-wrapper glass-panel reveal">
+        <form id="contact-form" onsubmit="event.preventDefault(); submitPreRegistration();">
           <div class="form-group">
             <label for="reg-name">Nome Completo</label>
             <input type="text" id="reg-name" class="form-control" required placeholder="Digite seu nome completo">
           </div>
           
           <div class="form-group">
-            <label for="reg-email">E-mail Corporativo / Pessoal</label>
+            <label for="reg-email">E-mail</label>
             <input type="email" id="reg-email" class="form-control" required placeholder="Digite seu melhor e-mail">
           </div>
           
@@ -695,24 +296,74 @@
               <input type="tel" id="reg-phone" class="form-control" required placeholder="(75) 99999-9999">
             </div>
             <div class="form-group">
-              <label for="reg-cpf">CPF</label>
-              <input type="text" id="reg-cpf" class="form-control" required placeholder="000.000.000-00">
+              <label for="reg-profession">Profissão / Área de Atuação</label>
+              <input type="text" id="reg-profession" class="form-control" required placeholder="Ex: Estudante, Enfermeiro, etc.">
             </div>
           </div>
           
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Finalizar Inscrição <i class="fa-solid fa-arrow-right"></i></button>
+          <div class="inscription-submit-container">
+            <button type="submit" class="btn btn-primary" id="submit-btn">Realizar Pré-Inscrição <i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </form>
       </div>
+    </div>
+  </section>
 
-      <!-- Success Screen -->
-      <div id="modal-success-container" class="success-message">
+  <!-- --- Footer --- -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-info">
+        <a href="#home" class="logo" style="margin-bottom: 15px;">
+          <img src="assets/logo sem.png" alt="Prime Instrumentação Logo" class="logo-img">
+        </a>
+        <p>Formação de excelência em instrumentação cirúrgica, alinhada às exigências e inovações da prática moderna.</p>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <h3>Navegação</h3>
+        <div class="footer-links-list">
+          <a href="#home">Home</a>
+          <a href="#about">O Curso</a>
+          <a href="#curriculum">O que aprender</a>
+          <a href="#coordination">Coordenação</a>
+          <a href="#team">Equipe</a>
+        </div>
+      </div>
+      
+      <div class="footer-contact">
+        <h3>Informações de Contato</h3>
+        <div class="footer-contact-list">
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>contato@primeinstrumentacao.com.br</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Bahia, Brasil</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Prime Instrumentação. Todos os direitos reservados. Capacitação em saúde com credibilidade.</p>
+    </div>
+  </footer>
+
+  <!-- --- Success Modal --- -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-content glass-panel">
+      <button class="modal-close" id="modal-close-btn">&times;</button>
+      
+      <div id="modal-success-container" class="success-message" style="display: block;">
         <div class="success-icon">
           <i class="fa-solid fa-circle-check"></i>
         </div>
-        <h4>Inscrição Pré-Confirmada!</h4>
-        <p>Enviamos os detalhes do pagamento e as instruções de validação do ingresso para o seu e-mail cadastrado.</p>
+        <h4>Pré-Inscrição Recebida!</h4>
+        <p>Recebemos suas informações. Nossa equipe comercial entrará em contato via WhatsApp para fornecer todos os detalhes sobre a próxima turma.</p>
         <button class="btn btn-secondary" style="margin-top: 25px; width: 100%;" id="success-close-btn">Fechar Janela</button>
       </div>
     </div>
