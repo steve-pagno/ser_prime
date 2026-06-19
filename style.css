@@ -729,6 +729,10 @@ header.scrolled .logo-img {
   transition: var(--transition-normal);
 }
 
+.social-link-btn i {
+  font-size: 1.15rem; /* Larger Instagram icon */
+}
+
 .social-link-btn:hover {
   background: var(--gradient-primary);
   color: #060b18;
@@ -1083,15 +1087,15 @@ footer {
 }
 
 .social-btn {
-  width: 40px;
-  height: 40px;
+  width: 44px; /* Slightly larger button */
+  height: 44px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  font-size: 1.25rem; /* Larger icon font-size */
   transition: var(--transition-normal);
 }
 
@@ -1327,6 +1331,67 @@ footer {
   to { transform: scale(1); opacity: 1; }
 }
 
+/* --- Disclaimer Section --- */
+.disclaimer {
+  background-color: var(--bg-primary);
+  padding: 40px 0 80px;
+}
+
+.disclaimer-card {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: var(--transition-normal);
+}
+
+.disclaimer-card:hover {
+  border-color: var(--accent-cyan);
+}
+
+.disclaimer-highlight {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 24px;
+}
+
+.disclaimer-icon {
+  font-size: 2.2rem;
+  color: var(--accent-cyan);
+  background: rgba(0, 245, 255, 0.04);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 245, 255, 0.15);
+}
+
+.disclaimer-main-text {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.disclaimer-fine-print p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.disclaimer-fine-print strong {
+  color: var(--text-secondary);
+}
+
 /* --- Responsive Media Queries --- */
 
 @media (max-width: 992px) {
@@ -1442,6 +1507,16 @@ footer {
   .modality-card {
     padding: 35px 24px; /* More balanced padding inside the cards */
   }
+
+  .disclaimer-highlight {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .disclaimer-card {
+    padding: 30px 24px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1469,5 +1544,13 @@ footer {
   .modality-header h3 {
     font-size: 1.2rem;
     min-height: auto; /* Wrap naturally on mobile viewports */
+  }
+
+  .disclaimer-card {
+    padding: 24px 16px;
+  }
+
+  .disclaimer-main-text {
+    font-size: 0.95rem;
   }
 }
