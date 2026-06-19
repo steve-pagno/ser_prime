@@ -60,6 +60,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // --- Modalities Selection and Scroll ---
+  const selectModalityButtons = document.querySelectorAll('.select-modality-btn');
+  const regModalitySelect = document.getElementById('reg-modality');
+
+  selectModalityButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const modalityValue = button.getAttribute('data-modality');
+      if (regModalitySelect) {
+        regModalitySelect.value = modalityValue;
+      }
+      
+      // Scroll to inscription form
+      const inscriptionSection = document.getElementById('inscription');
+      if (inscriptionSection) {
+        inscriptionSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
   // --- Pre-Registration Form Submission ---
   const modal = document.getElementById('checkout-modal');
   const modalCloseBtn = document.getElementById('modal-close-btn');
@@ -70,6 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.submitPreRegistration = function() {
     const submitBtn = document.getElementById('submit-btn');
     const originalText = submitBtn.innerHTML;
+    const modalitySelect = document.getElementById('reg-modality');
+    const selectedModalityText = modalitySelect ? modalitySelect.options[modalitySelect.selectedIndex].text : '';
     
     // Disable button & show loading state
     submitBtn.disabled = true;
@@ -77,6 +98,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Simulate API call
     setTimeout(() => {
+      // Update success modal text dynamically
+      const successParagraph = document.querySelector('#modal-success-container p');
+      if (successParagraph && selectedModalityText) {
+        successParagraph.innerHTML = `Recebemos suas informações para a modalidade:<br><strong>${selectedModalityText}</strong>.<br><br>Nossa equipe comercial entrará em contato via WhatsApp para fornecer todos os detalhes sobre a próxima turma.`;
+      }
+      
       // Show success modal
       modal.classList.add('active');
       
