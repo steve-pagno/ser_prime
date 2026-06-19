@@ -85,34 +85,50 @@ document.addEventListener('DOMContentLoaded', () => {
   const successCloseBtn = document.getElementById('success-close-btn');
   const contactForm = document.getElementById('contact-form');
 
-  // Handle Form Submission
-  window.submitPreRegistration = function() {
-    const submitBtn = document.getElementById('submit-btn');
-    const originalText = submitBtn.innerHTML;
-    const modalitySelect = document.getElementById('reg-modality');
-    const selectedModalityText = modalitySelect ? modalitySelect.options[modalitySelect.selectedIndex].text : '';
-    
-    // Disable button & show loading state
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Processando...';
-    
-    // Simulate API call
-    setTimeout(() => {
-      // Update success modal text dynamically
-      const successParagraph = document.querySelector('#modal-success-container p');
-      if (successParagraph && selectedModalityText) {
-        successParagraph.innerHTML = `Recebemos suas informações para a modalidade:<br><strong>${selectedModalityText}</strong>.<br><br>Nossa equipe comercial entrará em contato via WhatsApp para fornecer todos os detalhes sobre a próxima turma.`;
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const submitBtn = document.getElementById('submit-btn');
+      const originalText = submitBtn.innerHTML;
+      const modalitySelect = document.getElementById('reg-modality');
+      const selectedModalityText = modalitySelect ? modalitySelect.options[modalitySelect.selectedIndex].text : '';
+
+      // Disable button & show loading state
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Processando...';
+
+      const formData = new FormData(contactForm);
+
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          // Update success modal text dynamically
+          const successParagraph = document.querySelector('#modal-success-container p');
+          if (successParagraph && selectedModalityText) {
+            successParagraph.innerHTML = `Recebemos suas informações para a modalidade:<br><strong>${selectedModalityText}</strong>.<br><br>Nossa equipe comercial entrará em contato via WhatsApp para fornecer todos os detalhes sobre a próxima turma.`;
+          }
+          
+          // Show success modal
+          modal.classList.add('active');
+          contactForm.reset();
+        } else {
+          alert("Erro ao enviar pré-inscrição: " + data.message);
+        }
+      } catch (error) {
+        alert("Ocorreu um erro de conexão. Por favor, tente novamente.");
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
       }
-      
-      // Show success modal
-      modal.classList.add('active');
-      
-      // Reset form and submit button
-      contactForm.reset();
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalText;
-    }, 1200);
-  };
+    });
+  }
 
   // Close Modal Function
   function closeModal() {
