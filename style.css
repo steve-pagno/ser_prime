@@ -1434,6 +1434,14 @@ footer {
   .footer-info {
     grid-column: span 1;
   }
+
+  .modalities-grid {
+    gap: 45px; /* Better vertical separation between pricing cards */
+  }
+
+  .modality-card {
+    padding: 35px 24px; /* More balanced padding inside the cards */
+  }
 }
 
 @media (max-width: 480px) {
@@ -1452,5 +1460,14 @@ footer {
   
   .inscription-wrapper {
     padding: 20px;
+  }
+
+  .modality-card {
+    padding: 30px 18px; /* Clean look on narrower screens */
+  }
+
+  .modality-header h3 {
+    font-size: 1.2rem;
+    min-height: auto; /* Wrap naturally on mobile viewports */
   }
 }
